@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <title>Mega Sale – Offer Ends In</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <div class="strip"><div id="mq"></div></div>
+        <main class="wrap" id="banner">
+            <div class="sticker">40%<br />OFF</div>
+            <span class="live"><i></i>MEGA SALE IS LIVE</span>
+            <h1>Offer<br />Ends In</h1>
+            <p class="sub">Flat 40% off on everything. Grab it before the clock runs out.</p>
+            <div class="timer" role="timer">
+                <div class="card"><span class="num" id="d">00</span><span class="lbl">Days</span></div>
+                <div class="card"><span class="num" id="h">00</span><span class="lbl">Hours</span></div>
+                <div class="card"><span class="num" id="m">00</span><span class="lbl">Minutes</span></div>
+                <div class="card"><span class="num" id="s">00</span><span class="lbl">Seconds</span></div>
+            </div>
+            <div class="bar"><i id="fill"></i></div>
+            <p class="small">Sale time remaining</p>
+            <div class="done">Sale ended. See you next time!</div>
+            <div class="row">
+                <span class="code">CODE: <span id="coupon">SAVE40</span></span>
+                <button class="main" id="shop">Shop now</button>
+                <button id="restart">Restart demo</button>
+            </div>
+            <p class="small" style="margin-top: 18px">
+                🔥 <b id="claims">0</b> people grabbed this deal · <span id="mode"></span>
+            </p>
+        </main>
+
+        <dialog id="box" aria-labelledby="ttl">
+            <h2 id="ttl">You got the deal! 🎉</h2>
+            <p>Use this code at checkout. Offer ends in <b id="left">--</b>.</p>
+            <span class="big" id="code2">SAVE40</span>
+            <button id="copy">Copy code</button>
+            <button id="close">Close</button>
+            <div id="msg" role="status"></div>
+        </dialog>
+        <canvas id="fx"></canvas>
+        <script src="index.js"></script>
+    </body>
+</html>
